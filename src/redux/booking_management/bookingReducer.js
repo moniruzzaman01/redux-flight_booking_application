@@ -5,7 +5,11 @@ const initialState = [];
 const bookingReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD:
-      return [...state, { id: state.length, ...action.payload.data }];
+      if (state.length >= 3) {
+        return [...state];
+      } else {
+        return [...state, { id: state.length, ...action.payload.data }];
+      }
     case DELETE:
       console.log("delete");
       return [...state];
