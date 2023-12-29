@@ -10,10 +10,10 @@ function Form() {
     const destinationTo = e.target.to.value;
     const date = e.target.date.value;
     const guests = e.target.guests.value;
-    const ticketclass = e.target.ticketClass.value;
-    // console.log({ destinationFrom, destinationTo, date, guests, ticketclass });
+    const ticketClass = e.target.ticketClass.value;
+    // console.log({ destinationFrom, destinationTo, date, guests, ticketClass });
     dispatch(
-      addBooking({ destinationFrom, destinationTo, date, guests, ticketclass })
+      addBooking({ destinationFrom, destinationTo, date, guests, ticketClass })
     );
   };
 
@@ -30,9 +30,9 @@ function Form() {
             id="lws-from"
             required
           >
-            {/* <option value="" hidden>
+            <option value="" hidden>
               Please Select
-            </option> */}
+            </option>
             <option>Dhaka</option>
             <option>Sylhet</option>
             <option>Saidpur</option>
@@ -52,9 +52,9 @@ function Form() {
             id="lws-to"
             required
           >
-            {/* <option value="" hidden>
+            <option value="" hidden>
               Please Select
-            </option> */}
+            </option>
             <option>Dhaka</option>
             <option>Sylhet</option>
             <option>Saidpur</option>
@@ -86,9 +86,9 @@ function Form() {
             id="lws-guests"
             required
           >
-            {/* <option value="" hidden>
+            <option value="" hidden>
               Please Select
-            </option> */}
+            </option>
             <option value="1">1 Person</option>
             <option value="2">2 Persons</option>
             <option value="3">3 Persons</option>
@@ -108,9 +108,9 @@ function Form() {
             id="lws-ticketClass"
             required
           >
-            {/* <option value="" hidden>
+            <option value="" hidden>
               Please Select
-            </option> */}
+            </option>
             <option>Business</option>
             <option>Economy</option>
           </select>
