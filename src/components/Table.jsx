@@ -1,8 +1,11 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteBooking } from "../redux/booking_management/actions";
 
 function Table() {
   const bookings = useSelector((state) => state.booking);
+  const dispatch = useDispatch();
   console.log(bookings);
+
   return (
     <table className="booking-table">
       <thead className="bg-gray-100/50">
@@ -38,7 +41,10 @@ function Table() {
             </td>
             <td className="px-6 py-4 text-center">
               <div className="flex justify-center gap-4">
-                <button className="lws-remove">
+                <button
+                  onClick={() => dispatch(deleteBooking(booking))}
+                  className="lws-remove"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

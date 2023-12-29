@@ -10,9 +10,10 @@ const bookingReducer = (state = initialState, action) => {
       } else {
         return [...state, { id: state.length, ...action.payload.data }];
       }
-    case DELETE:
-      console.log("delete");
-      return [...state];
+    case DELETE: {
+      const newState = state.filter((x) => x.id != action.payload.data.id);
+      return [...newState];
+    }
     default:
       return [...state];
   }
