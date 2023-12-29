@@ -5,8 +5,7 @@ const initialState = [];
 const bookingReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD:
-      console.log("add");
-      return [...state];
+      return [...state, action.payload.data];
     case DELETE:
       console.log("delete");
       return [...state];

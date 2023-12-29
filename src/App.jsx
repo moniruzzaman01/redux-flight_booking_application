@@ -1,9 +1,13 @@
+import { useSelector } from "react-redux";
 import "./App.css";
 import Form from "./components/Form";
 import Header from "./components/Header";
 import Table from "./components/Table";
 
 function App() {
+  const booking = useSelector((state) => state.booking);
+  console.log(booking);
+
   return (
     <>
       <Header />
