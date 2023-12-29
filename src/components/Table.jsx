@@ -4,7 +4,6 @@ import { deleteBooking } from "../redux/booking_management/actions";
 function Table() {
   const bookings = useSelector((state) => state.booking);
   const dispatch = useDispatch();
-  console.log(bookings);
 
   return (
     <table className="booking-table">
