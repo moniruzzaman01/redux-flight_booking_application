@@ -1,6 +1,18 @@
+import { addBooking } from "../redux/booking_management/actions";
+
 function Form() {
+  const handleBookingForm = (e) => {
+    e.preventDefault();
+    const destinationFrom = e.target.from.value;
+    const destinationTo = e.target.to.value;
+    const date = e.target.date.value;
+    const guests = e.target.guests.value;
+    const ticketclass = e.target.ticketClass.value;
+    console.log({ destinationFrom, destinationTo, date, guests, ticketclass });
+  };
+
   return (
-    <form className="first-hero lws-inputform">
+    <form onSubmit={handleBookingForm} className="first-hero lws-inputform">
       {/* <!-- From --> */}
       <div className="des-from">
         <p>Destination From</p>
