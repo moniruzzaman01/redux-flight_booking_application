@@ -9,6 +9,7 @@ function Form() {
     const guests = e.target.guests.value;
     const ticketclass = e.target.ticketClass.value;
     console.log({ destinationFrom, destinationTo, date, guests, ticketclass });
+    addBooking();
   };
 
   return (
